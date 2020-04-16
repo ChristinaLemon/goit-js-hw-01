@@ -7,9 +7,9 @@ const result = prompt('Введите пароль!');
 
 if (result === ADMIN_PASSWORD) {
   message = 'Добро пожаловать!';
-} else if (result !== null) {
-  message = 'Доступ запрещен, неверный пароль!';
-} else if (result !== ADMIN_PASSWORD) {
+} else if (result === null) {
   message = 'Отменено пользователем!';
+} else {
+  message = 'Доступ запрещен, неверный пароль!';
 }
 alert(message);
